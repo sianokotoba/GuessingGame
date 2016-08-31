@@ -9,9 +9,19 @@
   img {
       text-align: center;
       /*display: inline;*/
-      width: 225px;
+      width: 240px;
       height: 60px;
   }
+  h1 {
+    font-weight: lighter;
+  }
+  @font-face {
+    font-family: "deep dark woods";
+    font-weight: lighter;
+    font-style: lighter;
+    src: url("/Users/sia/Fonts/in-the-deep-dark-woods.regular.ttf");
+  }
+
   #bg {
     background-image: url("/Users/sia/Fullstack/Foundations/GuessingGame/saw_bg.png");
     background-repeat: no-repeat;
@@ -21,7 +31,8 @@
     background-color: black;
   }
   #headers {
-      font-family: "american typewriter";
+      font-family: "deep dark woods";
+      font-size: 45px;
       color: white;
       /*width: auto; /*or your image's width*/
       /*height: auto; /*or your image's height*/
@@ -39,7 +50,8 @@
 
   #footer {
       width: 100%;
-      font-family: "american typewriter";
+      font-family: "deep dark woods";
+      font-weight: lighter;
       text-align: left;
       border-top: solid 2px black;
       /*background-color: white;*/
