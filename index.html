@@ -5,35 +5,13 @@
 
     <!-- Bootstrap and CSS here-->
     <link rel="stylesheet" href="assets/stylesheets/style.css">
+    <!-- Bootstrap: Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="assets/stylesheets/bootstrap/css/bootstrap.css">
 
-<!--
-    <style>
-      .center {
-        text-align: center;
-      }
-      ul {
-          list-style: none;
-          padding: 0;
-      }
-      img {
-          display: inline;
-          width: 200px;
-          height: 100px;
-      }
-      #footer {
-          width: 100%;
-          border-top: solid 2px black;
-          background-color: white;
-          position: fixed;
-          bottom: 0;
-      }
-    </style>
--->
-  <audio src="saw_audio.mp3" autoplay></audio>
-
+    <audio src="saw_audio.mp3" autoplay></audio>
   </head>
   <body id='bg'>
-      <div id='app'>
+      <div id='app' class="container-fluid">
 
         <div id='headers'>
           <h1>Guessing Game</h1>
@@ -46,35 +24,53 @@
         <div id='main'>
           <div id='input-parent'>
             <!-- Player's guess input, and submit button -->
-            <input type="image" src="saw_button3.png" width=100px>Will you survive?</input>
+            <input type="text" id="player-input" placeholder="  #" maxlength="3" autofocus="autofocus"></input>
+            <input type="image" id="player-input-btn" value="go" src="media/saw_button3.png" width=100px alt="Submit feedback" placeholder="#" maxlength="3" autofocus=autofocus></input>
+            <!-- <input id="player-input" class="center" placeholder="#" maxlength="3" autofocus="autofocus">
+            <button id="submit">Go!</button>
+            -->
+            <br>
+            <br>
+            <br>
           </div>
 
           <div id='guesses'>
             <!-- unordered list of guesses -->
+            <br>
+            <ul class='guess'>
+              <li>-</li>
+              <li>-</li>
+              <li>-</li>
+              <li>-</li>
+              <li>-</li>
+            </ul>
+            <br>
           </div>
 
           <div id="menu-btns">
             <!-- reset and hint buttons -->
+            <input type="image" value="go" src="media/saw_button_reset.png" width=100px alt="Submit feedback"></input>
+            <input type="image" value="go" src="media/saw_button_hint.png" width=100px alt="Submit feedback"></input>
           </div>
         </div>
       </div>
 
 
 
-    <div id='footer'>
-        <div>
+    <div id='footer' class="container">
+        <div class='row'>
 
 
-          <div class=''>
+          <div class='col-sm-4'>
             <h4>Project by sianokotoba</h4>
           </div>
 
-          <div class='logo'>
-            <img border="0" src='fa-logo@2x.png'></img>
+          <div class='col-sm-4'>
+            <img border="0" src='media/fa-logo@2x.png'></img>
           </div>
 
-          <div class='logo'>
-            <img border="0" src='grace_hopper_academy.png'></img>
+          <div class='col-sm-4'>
+            <img border="0" src='media/grace_hopper_academy.png'></img>
           </div>
 
 
@@ -82,4 +78,6 @@
     </div>
 
   </body>
+  <script src="/Users/sia/node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="/Users/sia/Fullstack/Foundations/GuessingGame/GuessingGame-Part2/GuessingGame.js"></script>
 </html>
